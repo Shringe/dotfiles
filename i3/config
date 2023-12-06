@@ -11,6 +11,8 @@
 
 
 set $exec exec --no-startup-id
+set $mod Mod4
+
 
 # autostart
 # DE applications
@@ -25,8 +27,8 @@ $exec polybar HDMI-0
 $exec greenclip daemon
 # notifications
 $exec dunst
-# wallet manager
-$exec /usr/lib/pam_kwallet_init
+# lock screen if inactive
+$exec --not-when-audio --not-when-fullscreen --timer 600 "betterlockscreen -l" ''
 
 # real applications
 $exec openrgb --startminimized
@@ -35,8 +37,9 @@ $exec sleep 1 ; kdeconnect-indicator
 
 # custom shorcuts
 # applications
-bindsym XF86MonBrightnessUp $exec redshift-toggle 3200
+bindsym XF86MonBrightnessUp $exec redshift-toggle 3000
 # bindsym XF86MonBrightnessDown $exec
+bindsym $mod+Shift+x $exec betterlockscreen -l
 
 
 # Window Settings:
@@ -50,7 +53,6 @@ gaps outer 1
 smart_gaps on
 
 
-set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -74,25 +76,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-#exec --no-startup-id nm-applet
-
-# Media controls
-bindsym XF86AudioPlay $exec playerctl play-pause
-bindsym XF86AudioNext $exec playerctl next
-bindsym XF86AudioPrev $exec playerctl previous
-
-
-
-#bindsym Mod2+XF86AudioMute $exec pamixer sset 'Master' toggle
-#bindsym Mod2+XF86AudioLowerVolume $exec pamixer sset 'Master' 5%-
-#bindsym Mod2+XF86AudioRaiseVolume $exec pamixer sset 'Master' 5%+
+exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume $exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume $exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
-bindsym XF86AudioMute $exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
-bindsym XF86AudioMicMute $exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -102,7 +93,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return $exec alacritty
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 #bindsym $mod+Shift+q kill
