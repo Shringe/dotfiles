@@ -16,6 +16,6 @@ import:
 font:
   # Normal (roman):
   normal:
-    family: DejaVuSansM Nerd Font Mono
+    family: MesloLGS NF
     style: Regular
 

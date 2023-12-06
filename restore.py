@@ -14,8 +14,8 @@ dotfiles: list = [
     "~/.config/qt5ct",
     "~/.config/qt6ct",
     "~/.config/dotfiles",
-    "~/.config/frogminer"
-    
+    "~/.config/frogminer",
+    "~/.config/dunst"
 ]
 
 
