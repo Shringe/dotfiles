@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# toggling
+TOGGLE=/tmp/redshift.toggle
+if [ ! -e $TOGGLE ]; then
+    touch $TOGGLE
+    redshift -O $1
+else
+    rm $TOGGLE
+    redshift -x
+fi
+
