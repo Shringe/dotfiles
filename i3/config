@@ -17,7 +17,7 @@ set $mod Mod4
 # autostart
 # DE applications
 # wallpaper
-$exec feh --bg-fill Downloads/wallpaperflare.com_wallpaper\(3\).jpg --bg-fill Downloads/waterlink_veritcal.png
+$exec --bg-fill ~/.config/wallpapers/link_water_temple.png --bg-fill ~/.config/wallpapers/waterlink_veritcal.png
 # compositor
 $exec picom
 # bar
@@ -28,11 +28,11 @@ $exec greenclip daemon
 # notifications
 $exec dunst
 # lock screen if inactive
-$exec --not-when-audio --not-when-fullscreen --timer 600 "betterlockscreen -l" ''
+$exec xidlehook --not-when-audio --not-when-fullscreen --timer 600 "betterlockscreen -l" ''
 
 # real applications
 $exec openrgb --startminimized
-$exec sleep 1 ; kdeconnect-indicator
+$exec sleep 1 && kdeconnect-indicator
 
 
 # custom shorcuts
@@ -93,7 +93,7 @@ floating_modifier $mod
 tiling_drag modifier titlebar
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return $exec alacritty
 
 # kill focused window
 #bindsym $mod+Shift+q kill

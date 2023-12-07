@@ -30,7 +30,7 @@ dependencyInstallCommand: list = ["yay", "-S", "--needed"]
 dependencyGroups: dict = {
     "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook"],
     "qtTheme":  ["kvantum"],
-    "fish":     ["fish", "fisher"],
+    "fish":     ["fish", "fisher", "eza", "bat"],
     "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu"]
 }
 
