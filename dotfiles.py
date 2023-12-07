@@ -34,6 +34,7 @@ dependencyGroups: dict = {
     "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu"]
 }
 
+
 def linkDotfiles(dotfiles: list) -> None:
     for file in dotfiles:
         # infering location of dotfiles in current repo, and getting fullpath of locatoin to symlink
@@ -89,6 +90,7 @@ To add dotfiles:
                 sys.exit(1)
         case _:
             print(helpMessage)
+
 
 
 if __name__ == "__main__":
