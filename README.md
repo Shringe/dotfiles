@@ -1,5 +1,5 @@
 # dotfiles
-My linux configuration.
+My linux configuration(dotfiles), and dotfiles.py helper script. 
 
 ## Usage
 More information under `python3 dotfiles.py --help`
