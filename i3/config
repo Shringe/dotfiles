@@ -28,7 +28,7 @@ $exec greenclip daemon
 # notifications
 $exec dunst
 # lock screen if inactive
-$exec xidlehook --not-when-audio --not-when-fullscreen --timer 600 "betterlockscreen -l" ''
+$exec xidlehook --not-when-audio --not-when-fullscreen --timer 600 "betterlockscreen --off 60 -l" ''
 
 # real applications
 $exec openrgb --startminimized
@@ -39,8 +39,12 @@ $exec sleep 1 && kdeconnect-indicator
 # applications
 bindsym XF86MonBrightnessUp $exec redshift-toggle 3000
 # bindsym XF86MonBrightnessDown $exec
-bindsym $mod+Shift+x $exec betterlockscreen -l
+bindsym $mod+Shift+x $exec "betterlockscreen --off 30 -l"
 
+# media controls
+bindsym XF86AudioPlay $exec playerctl play-pause
+bindsym XF86AudioNext $exec playerctl next
+bindsym XF86AudioPrev $exec playerctl previous
 
 # Window Settings:
 # titlebar disable
@@ -49,9 +53,7 @@ default_border pixel 0
 # window gaps
 gaps inner 3
 gaps outer 1
-
 smart_gaps on
-
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -72,11 +74,11 @@ exec --no-startup-id dex --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
