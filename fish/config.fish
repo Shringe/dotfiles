@@ -4,5 +4,5 @@ if status is-interactive
     # alias ls='colorls'
 
     # eza package must be installed
-    alias ls="eza --icons"
+    alias ls="eza --icons --group-directories-first"
 end
