@@ -54,6 +54,10 @@ bindsym Mod1+XF86AudioPlay $exec strawberry --play-pause
 bindsym Mod1+XF86AudioNext $exec strawberry --next
 bindsym Mod1+XF86AudioPrev $exec strawberry --previous
 
+# straberry audio controls
+bindsym Mod1+XF86AudioRaiseVolume $exec strawberry --volume-increase-by 5
+bindsym Mod1+XF86AudioLowerVolume $exec strawberry --volume-decrease-by 5
+bindsym Mod1+XF86AudioMute $exec strawberry --volume 0
 
 # Window Settings:
 # titlebar disable
