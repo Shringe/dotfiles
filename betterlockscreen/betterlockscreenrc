@@ -11,6 +11,8 @@ pixel_scale=10,1000
 solid_color=333333
 wallpaper_cmd="feh --bg-fill"
 quiet=false
+#off=2
+
 
 # default theme
 loginbox=00000066

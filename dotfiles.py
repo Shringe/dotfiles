@@ -28,7 +28,7 @@ dotfiles: list = [
 # dependencies for certain configs
 dependencyInstallCommand: list = ["yay", "-S", "--needed"]
 dependencyGroups: dict = {
-    "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook"],
+    "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook", "playerctl"],
     "qtTheme":  ["kvantum"],
     "fish":     ["fish", "fisher", "eza", "bat"],
     "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu"]

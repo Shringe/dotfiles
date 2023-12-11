@@ -17,7 +17,7 @@ set $mod Mod4
 # autostart
 # DE applications
 # wallpaper
-$exec --bg-fill ~/.config/wallpapers/link_water_temple.png --bg-fill ~/.config/wallpapers/waterlink_veritcal.png
+$exec feh --bg-fill ~/.config/wallpapers/link_water_temple.png --bg-fill ~/.config/wallpapers/waterlink_veritcal.png
 # compositor
 $exec picom
 # bar
@@ -38,13 +38,22 @@ $exec sleep 1 && kdeconnect-indicator
 # custom shorcuts
 # applications
 bindsym XF86MonBrightnessUp $exec redshift-toggle 3000
+bindsym $mod+Mod1+Return $exec colemak-toggle
+
 # bindsym XF86MonBrightnessDown $exec
 bindsym $mod+Shift+x $exec "betterlockscreen --off 30 -l"
+
 
 # media controls
 bindsym XF86AudioPlay $exec playerctl play-pause
 bindsym XF86AudioNext $exec playerctl next
 bindsym XF86AudioPrev $exec playerctl previous
+
+# straberry media controls
+bindsym Mod1+XF86AudioPlay $exec strawberry --play-pause
+bindsym Mod1+XF86AudioNext $exec strawberry --next
+bindsym Mod1+XF86AudioPrev $exec strawberry --previous
+
 
 # Window Settings:
 # titlebar disable

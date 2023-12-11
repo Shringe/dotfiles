@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# toggles between qwerty and colemak
+
+# toggling
+TOGGLE=/tmp/colemak.toggle
+if [ ! -e $TOGGLE ]; then
+    touch $TOGGLE
+    setxkbmap us -v colemak
+else
+    rm $TOGGLE
+    setxkbmap us
+fi
+
