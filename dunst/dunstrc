@@ -15,8 +15,8 @@
     progress_bar = true
     progress_bar_height = 14
     progress_bar_frame_width = 1
-    progress_bar_min_width = 150
-    progress_bar_max_width = 300
+    #progress_bar_min_width = 150
+    #progress_bar_max_width = 300
 
 
     # Show how many messages are hidden
@@ -51,7 +51,7 @@
 
     # Set the font
     # font = "Noto Sans 11"
-    font = "DejaVu Mono 30"
+    font = "DejaVu Mono 10"
 
     # Set line height to font height
     line_height = 0
@@ -72,7 +72,7 @@
     #  %% Literal %
 
     markup = full
-    format = "<b>%a</b>\n%s"
+    format = "<b>%a</b>\n%s\n%p"
 
     # Left align the text
     alignment = left

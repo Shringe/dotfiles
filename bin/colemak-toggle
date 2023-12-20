@@ -3,12 +3,12 @@
 # toggles between qwerty and colemak
 
 # toggling
-TOGGLE=/tmp/colemak.toggle
+TOGGLE=/tmp/qwerty.toggle
 if [ ! -e $TOGGLE ]; then
     touch $TOGGLE
-    setxkbmap us -v colemak
+    setxkbmap us
 else
     rm $TOGGLE
-    setxkbmap us
+    setxkbmap us -v colemak
 fi
 

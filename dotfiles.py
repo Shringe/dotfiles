@@ -20,7 +20,9 @@ dotfiles: list = [
     "~/.bashrc",
     "~/.config/wallpapers",
     "~/.local/bin",
-    "~/.config/betterlockscreen"
+    "~/.config/betterlockscreen",
+    "~/.config/modprobed.db",
+    "~/.config/modprobed-db.conf"
 ]
 
 
