@@ -11,18 +11,21 @@
 
 
 set $exec exec --no-startup-id
+set $exec-always exec_always --no-startup-id
+
 set $mod Mod4
 
 
 # autostart
 # DE applications
 # wallpaper
-$exec feh --bg-fill ~/.config/wallpapers/link_water_temple.png --bg-fill ~/.config/wallpapers/waterlink_veritcal.png
+$exec-always feh --bg-fill ~/.config/wallpapers/link_water_temple.png --bg-fill ~/.config/wallpapers/waterlink_veritcal.png
 # compositor
 $exec picom
-# bar
-$exec polybar DP-0
-$exec polybar HDMI-0
+# reset bar
+$exec-always killall polybar
+$exec-always sleep 0.05 && polybar DP-0
+$exec-always sleep 0.05 && polybar HDMI-0
 # clipboard
 $exec greenclip daemon
 # notifications
@@ -46,15 +49,20 @@ bindsym $mod+Shift+x $exec "betterlockscreen --off 30 -l"
 
 
 # media controls
-bindsym XF86AudioPlay $exec playerctl play-pause
-bindsym XF86AudioNext $exec playerctl next
-bindsym XF86AudioPrev $exec playerctl previous
+bindsym XF86AudioPlay $exec media-control pp
+bindsym XF86AudioNext $exec media-control next
+bindsym XF86AudioPrev $exec media-control prev
+
+# audio controls
+bindsym XF86AudioRaiseVolume $exec media-control vup
+bindsym XF86AudioLowerVolume $exec media-control vown
+bindsym XF86AudioMute $exec media-control vute
+
 
 # straberry media controls
 bindsym Mod1+XF86AudioPlay $exec strawberry --play-pause
 bindsym Mod1+XF86AudioNext $exec strawberry --next
 bindsym Mod1+XF86AudioPrev $exec strawberry --previous
-
 
 # straberry audio controls
 bindsym Mod1+XF86AudioRaiseVolume $exec strawberry --volume-increase-by 3 
@@ -96,9 +104,10 @@ exec --no-startup-id dex --autostart --environment i3
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
+
+
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
 # Use Mouse+$mod to drag floating windows to their wanted position
