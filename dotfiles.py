@@ -22,7 +22,8 @@ dotfiles: list = [
     "~/.local/bin",
     "~/.config/betterlockscreen",
     "~/.config/modprobed.db",
-    "~/.config/modprobed-db.conf"
+    "~/.config/modprobed-db.conf",
+    "~/.config/rofi"
 ]
 
 
@@ -30,7 +31,7 @@ dotfiles: list = [
 # dependencies for certain configs
 dependencyInstallCommand: list = ["yay", "-S", "--needed"]
 dependencyGroups: dict = {
-    "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook", "playerctl"],
+    "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook", "playerctl", "autotiling", "betterlockscreen", "rofi"],
     "qtTheme":  ["kvantum"],
     "fish":     ["fish", "fisher", "eza", "bat"],
     "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu"]
@@ -50,7 +51,7 @@ def linkDotfiles(dotfiles: list) -> None:
             print(f"❌> Symlinked {repositoryLocation} to {systemLocation}")
 
 
-def installGroups(installCommand: str, groupsToInstall: list):
+def installGroups(installCommand: str, groupsToInstall: list) -> None:
     # removing nested lists
     packages: list = sum(groupsToInstall, [])
 
