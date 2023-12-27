@@ -32,6 +32,7 @@ dotfiles: list = [
 dependencyInstallCommand: list = ["yay", "-S", "--needed"]
 dependencyGroups: dict = {
     "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook", "playerctl", "autotiling", "betterlockscreen", "rofi", "autotiling"],
+    "polybar":  ["polybar", "pavucontrol-qt"],
     "rofi":     ["rofi", "rofi-nordvpn-git"],
     "qtTheme":  ["kvantum"],
     "fish":     ["fish", "fisher", "eza", "bat"],
