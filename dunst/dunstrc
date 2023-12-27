@@ -1,5 +1,7 @@
 [global]
-    font = "DeJavu Sans 10, Ubuntu Light 9"
+    # font = "DeJavu Sans 10, Ubuntu Light 9"
+    font = "Font Awesome 5 Free Regular 10, Ubuntu Light 9"
+
     allow_markup = yes
     markup = yes
     format = "<span foreground='#5bb1b4'><b>%s</b></span>\n%b"
