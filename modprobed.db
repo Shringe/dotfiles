@@ -1,8 +1,12 @@
 acpi_cpufreq
 aesni_intel
+af_alg
+algif_hash
+algif_skcipher
 apple_mfi_fastcharge
 blake2b_generic
 bluetooth
+bnep
 btbcm
 btintel
 btmtk
@@ -12,6 +16,7 @@ btusb
 ccp
 cfg80211
 chacha_x86_64
+cmac
 crc16
 crc32c_generic
 crc32c_intel
@@ -19,6 +24,7 @@ crc32_pclmul
 crct10dif_pclmul
 cryptd
 crypto_simd
+crypto_user
 curve25519_x86_64
 dm_mod
 ecdh_generic
@@ -34,6 +40,8 @@ ghash_clmulni_intel
 gpio_amdpt
 gpio_generic
 hid_apple
+hid_nintendo
+hidp
 i2c_dev
 i2c_piix4
 inet_diag
@@ -98,6 +106,7 @@ r8169
 raid6_pq
 rapl
 realtek
+rfcomm
 rfkill
 sha1_ssse3
 sha256_ssse3

@@ -27,7 +27,7 @@ $exec-always killall polybar
 $exec-always sleep 0.05 && polybar DP-0
 $exec-always sleep 0.05 && polybar HDMI-0
 # autotiling "alternate between split v/h"
-$exec-always autotiling
+$exec-always autotiling-rs-fixed
 # clipboard
 $exec greenclip daemon
 # notifications
@@ -43,13 +43,18 @@ $exec sleep 1 && kdeconnect-indicator
 # custom shorcuts
 # applications
 bindsym XF86MonBrightnessUp $exec redshift-toggle 3000
+bindsym XF86MonBrightnessDown $exec openrgb-off
 bindsym $mod+Mod1+Return $exec colemak-toggle
 bindsym Print exec flameshot gui
+bindsym $mod+f exec dolphin
+bindsym $mod+r exec firefox
 
 # rofi
 bindsym $mod+s exec "rofi -modi drun,run -show drun"
 bindsym $mod+d exec "rofi -modi 'clipboard:greenclip print' -show clipboard"
 bindsym $mod+g exec "rofi-nordvpn"
+bindsym $mod+b exec "rofi-bluetooth"
+bindsym $mod+shift+g exec "rofi -show power-menu -modi power-menu:rofi-power-menu"
 
 # bindsym XF86MonBrightnessDown $exec
 bindsym $mod+Shift+x $exec "betterlockscreen --off 30 -l"
@@ -82,6 +87,7 @@ bindsym Mod1+XF86AudioMute $exec strawberry --volume 0
 
 # assigning windows workspaces
 assign [class="strawberry"] 2
+assign [class="discord"] 2
 
 # Window Settings:
 # titlebar disable
@@ -186,7 +192,7 @@ bindsym $mod+t fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 #bindsym $mod+s layout stacking
 #bindsym $mod+w layout tabbed
-bindsym $mod+f layout toggle split
+#bindsym $mod+f layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -265,10 +271,10 @@ mode "resize" {
         # Pressing down will grow the window’s height.
         set $resizeValue 5
 
-        bindsym n resize shrink width $resizeValue px or $resizeValue ppt
+        bindsym n resize grow width $resizeValue px or $resizeValue ppt
         bindsym e resize grow height $resizeValue px or $resizeValue ppt
         bindsym i resize shrink height $resizeValue px or $resizeValue ppt
-        bindsym o resize grow width $resizeValue px or $resizeValue ppt
+        bindsym o resize shrink width $resizeValue px or $resizeValue ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width $resizeValue px or $resizeValue ppt
