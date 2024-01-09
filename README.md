@@ -4,7 +4,9 @@ My linux configuration(dotfiles), and dotfiles.py helper script.
 ## Usage
 More information under `python3 dotfiles.py --help`
 # add dotfiles
-`git clone https://github.com/Shringe/dotfiles`
+```
+git clone https://github.com/Shringe/dotfiles
+```
 then `mv` the files/directories you want to add to the dotfiles directory, and add the path that the file came from to dotfiles.py
 
 # restore dotfiles
