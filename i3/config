@@ -42,7 +42,7 @@ $exec sleep 1 && kdeconnect-indicator
 
 # custom shorcuts
 # applications
-bindsym XF86MonBrightnessUp $exec redshift-toggle 3000
+bindsym XF86MonBrightnessUp $exec redshift-toggle 2800
 bindsym XF86MonBrightnessDown $exec openrgb-off
 bindsym $mod+Mod1+Return $exec colemak-toggle
 bindsym Print exec flameshot gui
