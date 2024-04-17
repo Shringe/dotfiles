@@ -8,7 +8,16 @@ SETUVAR _fisher_oh_2D_my_2D_fish_2F_plugin_2D_sudope_files:\x7e/\x2econfig/fish/
 SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_fzf_configure_bindings_help\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_extract_var_info\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_changed_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_preview_file\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_diff_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_report_file_type\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_directory\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_log\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_git_status\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_history\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_processes\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_search_variables\x2efish\x1e\x7e/\x2econfig/fish/functions/_fzf_wrapper\x2efish\x1e\x7e/\x2econfig/fish/functions/fzf_configure_bindings\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/fzf\x2efish\x1e\x7e/\x2econfig/fish/completions/fzf_configure_bindings\x2efish
 SETUVAR _fisher_plugins:patrickf1/fzf\x2efish\x1efranciscolourenco/done\x1eoh\x2dmy\x2dfish/plugin\x2dsudope\x1edecors/fish\x2dcolored\x2dman\x1ejustinmayer/virtualfish\x1ejorgebucaran/hydro
 SETUVAR _fisher_upgraded_to_4_4:\x1d
-SETUVAR _hydro_git_4708:main\u2022\x20
+SETUVAR _hydro_git_156227:master\u2022\x20
+SETUVAR _hydro_git_196109:master\u2022\x20
+SETUVAR _hydro_git_196148:master\u2022\x20
+SETUVAR _hydro_git_196150:master\u2022\x20
+SETUVAR _hydro_git_34496:master\u2022\x20
+SETUVAR _hydro_git_50323:master\u2022\x20
+SETUVAR _hydro_git_56683:master\u2022\x20
+SETUVAR _hydro_git_71834:main\u2022\x20
+SETUVAR _hydro_git_80978:master\u2022\x20
+SETUVAR _hydro_git_80997:master\u2022\x20
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue

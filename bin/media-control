@@ -47,7 +47,7 @@ function get_volume_icon {
     elif [ "$volume" -lt 50 ]; then
         volume_icon=" "
     else
-        volume_icon=" "
+        volume_icon="  "
     fi 
 }
 
