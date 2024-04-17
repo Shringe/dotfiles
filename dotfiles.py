@@ -39,7 +39,7 @@ dependencyGroups: dict = {
     "fish":     ["fish", "fisher", "eza", "bat"],
     "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu", "otf-font-awesome-4"],
     "qtile":    ["qtile", "qtile-extras", "python-pulsectl-asyncio", "picom", "dunst", "greenclip", "feh", "xidlehook", "betterlockscreen", "polkit-dumb-agent-git"],
-    "nvim": ["nvim"]
+    "nvim": ["neovim"]
 }
 
 
