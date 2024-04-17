@@ -23,7 +23,8 @@ dotfiles: list = [
     "~/.config/betterlockscreen",
     "~/.config/modprobed.db",
     "~/.config/modprobed-db.conf",
-    "~/.config/rofi"
+    "~/.config/rofi",
+    "~/.config/nvim"
 ]
 
 
@@ -31,12 +32,14 @@ dotfiles: list = [
 # dependencies for certain configs
 dependencyInstallCommand: list = ["yay", "-S", "--needed"]
 dependencyGroups: dict = {
-    "i3wm":     ["i3", "picom", "polybar", "dunst", "greenclip", "feh", "xidlehook", "playerctl", "autotiling", "betterlockscreen", "rofi", "autotiling"],
+    "i3wm":     ["i3", "picom", "dunst", "greenclip", "feh", "xidlehook", "playerctl", "betterlockscreen", "rofi", "polkit-dumb-agent-git"],
     "polybar":  ["polybar", "pavucontrol-qt"],
     "rofi":     ["rofi", "rofi-nordvpn-git", "rofi-bluetooth-git", "rofi-power-menu"],
     "qtTheme":  ["kvantum"],
     "fish":     ["fish", "fisher", "eza", "bat"],
-    "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu"]
+    "fonts":    ["ttf-meslo-nerd-font-powerlevel10k", "ttf-dejavu", "otf-font-awesome-4"],
+    "qtile":    ["qtile", "qtile-extras", "python-pulsectl-asyncio", "picom", "dunst", "greenclip", "feh", "xidlehook", "betterlockscreen", "polkit-dumb-agent-git"],
+    "nvim": ["nvim"]
 }
 
 
