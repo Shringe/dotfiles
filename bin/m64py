@@ -1,0 +1,4 @@
+#!/usr/bin/python
+# EASY-INSTALL-SCRIPT: 'm64py==0.2.5','m64py'
+__requires__ = 'm64py==0.2.5'
+__import__('pkg_resources').run_script('m64py==0.2.5', 'm64py')
